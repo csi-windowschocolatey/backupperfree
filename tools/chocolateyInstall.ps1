@@ -1,7 +1,7 @@
 ﻿$packageName = 'backupperfree'
 $installerType = 'EXE'
 $url = 'http://www.aomeisoftware.com/download/adb/BackupperFull.exe'
-$silentArgs = "/VERYSILENT /NORESTART /SUPPRESSMSGBOXES /SP- /LOG"
+$silentArgs = "/VERYSILENT /NORESTART /SUPPRESSMSGBOXES /SP- /LOG=`"$env:temp\CHOCO-INSTALL-backupperfree.log`""
 $validExitCodes = @(0)
 
 Install-ChocolateyPackage "$packageName" "$installerType" "$silentArgs" "$url" -validExitCodes $validExitCodes
